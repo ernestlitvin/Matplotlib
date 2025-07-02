@@ -25,7 +25,7 @@ import numpy as np
 # ax.legend(loc=9) # 0 - 9
 # plt.show()
 
-###--- UZD 1 --- ###
+###--- UZD A --- ###
 
 # A) Duotas sąrašas x=[1,2,3,4,5,6,7,8,9]
 # Viename lange, skirtinguose grafikuose atvaizduokite 𝑥2, 𝑥 ⋅ 3,
@@ -34,7 +34,45 @@ import numpy as np
 
 x=[1,2,3,4,5,6,7,8,9]
 
+langas, grafikas = plt.subplots(3)
 
+a = int(input("Iveskite skaiciu a: "))
+
+y1 = [i**2 for i in x]
+y2 = [i*3 for i in x]
+y3 = [i*a for i in x]
+
+grafikas[0].plot(x,y1, marker='8', linestyle=':', color='#c875c4', markersize=12)
+grafikas[1].plot(x,y2, marker='s', linestyle='--', color='red', markersize=10)
+grafikas[2].plot(x,y3, marker='d', linestyle='-', color='blue', markersize=8)
+
+grafikas[0].set_title("x^2")
+grafikas[1].set_title("x*3")
+grafikas[2].set_title(f"x*{a}")
+
+plt.show()
+
+
+###--- UZD B --- ###
+
+# Duoti sąrašai
+# x = [1,2,3,4,5],
+# y1= [2,2,0,0,2],
+# y2) = [4,3,2,1,-1],
+# y3) = [2,4,9,16,25],
+# y4) = [-1,1,-1,1,-1]
+#
+# Atvaizduokite viename lange, skirtinguose grafikuose x~y1, x~y2, x~y3, x~y4 grafikus.
+# Pirmasis grafikas - linijinis, antrasis - taškinis,
+# trečiasis - linija su duomenų taškais,
+# ketvirtasis - brūkšninis.
+# Spalvos visų turi būti skirtingos. Grafikai, ašys turi turėti pavadinimus.
+
+x = [1,2,3,4,5],
+y1= [2,2,0,0,2],
+y2 = [4,3,2,1,-1],
+y3 = [2,4,9,16,25],
+y4 = [-1,1,-1,1,-1]
 
 
 
