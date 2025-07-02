@@ -1,3 +1,5 @@
+import random
+
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -68,7 +70,7 @@ import numpy as np
 # ketvirtasis - brūkšninis.
 # Spalvos visų turi būti skirtingos. Grafikai, ašys turi turėti pavadinimus.
 
-x = [1,2,3,4,5]
+'''x = [1,2,3,4,5]
 y1= [2,2,0,0,2]
 y2 = [4,3,2,1,-1]
 y3 = [2,4,9,16,25]
@@ -98,15 +100,37 @@ grafikas[3].set_ylabel('Y asis')
 
 plt.tight_layout()
 plt.show()
+'''
 
 ###--- UZD C --- ###
 
 # Sugeneruoti sąrašą 𝑥, turintį 101 elementą (nuo 0 iki 100).
 # Sukurti antrą sąrašą, kuriame būtų skaičiai, pakelti kvadratu, iš pirmojo sąrašo (𝑥2)
 # Sukurti trečiąjį sąrašą, kuriame skaičiai būtų pakelti kvadratu ir padauginti iš atsitiktinai sugeneruoto skaičiaus (𝑥2 ⋅ 𝑎).
-# Sugeneruoti 100-to elementų ilgio sąrašą iš atsitiktinių skaičių. Visus šiuos sąrašus atvaizduoti grafike.
+# Sugeneruoti 100-to elementų ilgio sąrašą iš atsitiktinių skaičių.
+# Visus šiuos sąrašus atvaizduoti grafike.
 # Grafikas turi turėti pavadinimą, pavadintos ašys, pakeisti šriftų dydžiai.
 
+# x1 = list(range(101))
+# x2 = [i**2 for i in x1]
+# a = random.randint(1,100)
+# x3 = [i * a for i in x2]
+# x4 = [random.randint(1,100) for _ in range(100)]
+#
+# mer,per = plt.subplots()
+# per.plot(x1,x1,marker='o', linestyle=':', color='#c875c4', markersize=1, label = "x1")
+# per.plot(x1,x2, marker = 'd', linestyle='-.', color='red', markersize=5, label = "x1^2")
+# per.plot(x1,x3, marker = 's', linestyle='-.', color='blue', markersize=3, label = "x^2*a")
+# per.scatter(range(len(x4)), x4, color='green', label='Random values', s=64)
+#
+# per.set_yscale('log')
+# per.set_title('Grafikas visu asiu')
+# per.set_xlabel('X asis', fontsize=8)
+# per.set_ylabel('Y asis', fontsize=10)
+#
+# plt.tight_layout()
+# per.legend()
+# plt.show()
 
 
 
