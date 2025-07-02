@@ -32,25 +32,25 @@ import numpy as np
 # 𝑥 ⋅ 𝑎, čia a - įvedamas vartotojo.
 # Panaudokite skirtingas spalvas, linijų tipus.
 
-x=[1,2,3,4,5,6,7,8,9]
-
-langas, grafikas = plt.subplots(3)
-
-a = int(input("Iveskite skaiciu a: "))
-
-y1 = [i**2 for i in x]
-y2 = [i*3 for i in x]
-y3 = [i*a for i in x]
-
-grafikas[0].plot(x,y1, marker='8', linestyle=':', color='#c875c4', markersize=12)
-grafikas[1].plot(x,y2, marker='s', linestyle='--', color='red', markersize=10)
-grafikas[2].plot(x,y3, marker='d', linestyle='-', color='blue', markersize=8)
-
-grafikas[0].set_title("x^2")
-grafikas[1].set_title("x*3")
-grafikas[2].set_title(f"x*{a}")
-
-plt.show()
+# x=[1,2,3,4,5,6,7,8,9]
+#
+# langas, grafikas = plt.subplots(3)
+#
+# a = int(input("Iveskite skaiciu a: "))
+#
+# y1 = [i**2 for i in x]
+# y2 = [i*3 for i in x]
+# y3 = [i*a for i in x]
+#
+# grafikas[0].plot(x,y1, marker='8', linestyle=':', color='#c875c4', markersize=12)
+# grafikas[1].plot(x,y2, marker='s', linestyle='--', color='red', markersize=10)
+# grafikas[2].plot(x,y3, marker='d', linestyle='-', color='blue', markersize=8)
+#
+# grafikas[0].set_title("x^2")
+# grafikas[1].set_title("x*3")
+# grafikas[2].set_title(f"x*{a}")
+#
+# plt.show()
 
 
 ###--- UZD B --- ###
@@ -68,11 +68,45 @@ plt.show()
 # ketvirtasis - brūkšninis.
 # Spalvos visų turi būti skirtingos. Grafikai, ašys turi turėti pavadinimus.
 
-x = [1,2,3,4,5],
-y1= [2,2,0,0,2],
-y2 = [4,3,2,1,-1],
-y3 = [2,4,9,16,25],
+x = [1,2,3,4,5]
+y1= [2,2,0,0,2]
+y2 = [4,3,2,1,-1]
+y3 = [2,4,9,16,25]
 y4 = [-1,1,-1,1,-1]
+
+langas, grafikas = plt.subplots(4,1, figsize=(4,8))
+
+grafikas[0].plot(x,y1, marker='o', color='red', markersize=12)
+grafikas[1].scatter(x,y2, marker='s', color='#c875c4')
+grafikas[2].plot(x,y3, marker='d', linestyle='-.', color='blue', markersize=12)
+grafikas[3].bar(x,y4, color='purple')
+
+grafikas[0].set_title('Grafika 1')
+grafikas[1].set_title('Grafika 2')
+grafikas[2].set_title('Grafika 3')
+grafikas[3].set_title('Grafika 4')
+
+grafikas[0].set_xlabel('X asis')
+grafikas[1].set_xlabel('X asis')
+grafikas[2].set_xlabel('X asis')
+grafikas[3].set_xlabel('X asis')
+
+grafikas[0].set_ylabel('Y asis')
+grafikas[1].set_ylabel('Y asis')
+grafikas[2].set_ylabel('Y asis')
+grafikas[3].set_ylabel('Y asis')
+
+plt.tight_layout()
+plt.show()
+
+###--- UZD C --- ###
+
+# Sugeneruoti sąrašą 𝑥, turintį 101 elementą (nuo 0 iki 100).
+# Sukurti antrą sąrašą, kuriame būtų skaičiai, pakelti kvadratu, iš pirmojo sąrašo (𝑥2)
+# Sukurti trečiąjį sąrašą, kuriame skaičiai būtų pakelti kvadratu ir padauginti iš atsitiktinai sugeneruoto skaičiaus (𝑥2 ⋅ 𝑎).
+# Sugeneruoti 100-to elementų ilgio sąrašą iš atsitiktinių skaičių. Visus šiuos sąrašus atvaizduoti grafike.
+# Grafikas turi turėti pavadinimą, pavadintos ašys, pakeisti šriftų dydžiai.
+
 
 
 
