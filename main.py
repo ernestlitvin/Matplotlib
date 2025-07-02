@@ -132,9 +132,29 @@ plt.show()
 # per.legend()
 # plt.show()
 
+###--- UZD D --- ###
 
+''' Turimos vidutinės mėnesių temparatūros
+tC=[-3.2, -3.2, +0.4, +6.7, +12.4, +15.4, +17.9, +17.1, +12.3, ↪ +7.2, +1.9, -1.9]
+Nubraižykite stulpelinę diagramą. Neigiamas temperatūras rodantys stulpeliai turi būti mėlyni, 
+o teigiamas - žali. 𝑥 ašyje turi būti rodomi mėnesių pavadinimai.
+'''
 
+tC=[-3.2, -3.2, +0.4, +6.7, +12.4, +15.4, +17.9, +17.1, +12.3, +7.2, +1.9, -1.9]
+spalvos = ["green" if t > 0 else "blue" for t in tC]
+x=range(12)
+men = ["Sausis", "Vasaris", "Kovas", "Balandis", "Gegužė", "Birželis",
+       "Liepa", "Rugpjūtis", "Rugsėjis", "Spalis", "Lapkritis", "Gruodis"]
+# import calendar
+# men = list(calendar.month_name)[1:]  # ['January', 'February', ..., 'December'] --- alternative method
 
+par, mar = plt.subplots()
+mar.bar(x,tC, color = spalvos, label = "Temperatura", width = 0.5)
+mar.set_xticks(x)
+mar.set_xticklabels(men, rotation=45)
+
+mar.legend()
+plt.show()
 
 
 
