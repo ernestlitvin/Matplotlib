@@ -157,4 +157,19 @@ mar.legend()
 plt.show()
 
 
+###--- UZD SQL & PYTHON AND CHARTS --- ###
+'''
+pip install matplotlib
+pip install mysql-connector-python
+
+Prisijungti prie sakila duomenų bazės. 
+Pabandyti consolėje atsispausdinti customer lentelės duomenis.
+
+1. Atvaizduoti kiek kiekvienas klientas iš viso yra išleidęs filmų nuomai. atvaizduojame stulpeline diagrama
+2. Atvaizduoti filmus pagal jų trukmes. t.y sugrupuoti pagal trukmę ir Y ašyje rodyti kiekį, X trukmę. Stulpelinė diagrama.
+3. Atvaizduoti kiek sugeneruota pajamų pamėnesiui. Stulpeliais pajamas, kreive su taškais kiek filmų buvo išnuomuota.
+4. Atvaizduoti filmus pagal kategorijas, piechart. Kategorijos yra category lentelėje.
+5. Top 10 populiariausių filmų pagal išnuomavimo kiekį. Atvaizdavimas pasirinktinai
+'''
+
 
